@@ -11,12 +11,6 @@ class Spirale():
     def length(self, cycle):
         return 8 * cycle
 
-    def sector(self, index):
-        c = self.cycle(index)
-        offset = index - self.first(c)
-        n = self.length(c)
-        return 4 * offset / n
-
     def isqrt(self, x):
         """Calculates the integer square root of a number"""
         if x < 0:
@@ -32,7 +26,7 @@ class Spirale():
                 return x
             x = y
 
-    def get_position_2(self, index):
+    def get_position(self, index):
         c = self.cycle(index)
         offset=index-self.first(c)
 
@@ -65,20 +59,6 @@ class Spirale():
 
 
         return dx, dy
-
-
-    def get_position(self, index):
-        c = self.cycle(index)
-        s = self.sector(index)
-        offset = index - self.first(c) - s * self.length(c) // 4
-        if s == 0: #north
-            return -c, -c + offset + 1
-        if s == 1: #east
-            return -c + offset + 1, c
-        if s == 2: #south
-            return c, c - offset - 1
-        # else, west
-        return c - offset - 1, -c
 
     def get_distance(self, value):
         position=self.get_position(value)
