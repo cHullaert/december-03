@@ -7,11 +7,9 @@ For my side, I decided to solve it with a different language each day (if I succ
   
 http://adventofcode.com/2017
 
-# December 02
+# December 03
 
 For the moment, I don't know if I can copy/paste the exercise, I want to ask before.  Don't hesitate to go on the website, to visit them, to practice, to try and discover the exercise.
 
-First puzzle, done.
-* Language: groovy
-* Unit test: JUnit
-* Build: Gradle
+* Language: python
+* Unit test: unitrunner
