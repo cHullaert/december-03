@@ -8,6 +8,10 @@ class TestSpirale(unittest.TestCase):
         spirale=Spirale()
         self.assertEqual(spirale.get_position(1), (0, 0))
 
+    def test_position(self):
+        spirale=Spirale()
+        self.assertEqual(spirale.get_position(2), (0, 1))
+
     def test_position12(self):
         spirale=Spirale()
         self.assertEqual(spirale.get_position(12), (1, 2))
@@ -31,6 +35,6 @@ class TestSpirale(unittest.TestCase):
     def test_distanceTo1024Is31(self):
         spirale=Spirale()
         self.assertEqual(spirale.get_distance(1024), 31)
-        
+
 if __name__ == '__main__':
     unittest.main()
